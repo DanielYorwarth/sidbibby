@@ -1,0 +1,8 @@
+.hero {
+  height: calc(100vh - 85px);
+}
+@media(max-width: 350px) {
+  .hero {
+    height: 100%;
+  }
+}

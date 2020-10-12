@@ -1,0 +1,18 @@
+.work {
+  height: 20vw;
+  max-height: 400px;
+  &__tag {
+    top: 0.5rem;
+    right: 0.5rem;
+  }
+  &__text {
+    transform: translate(-50%);
+    left: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .work {
+    height: 300px;
+  }
+}

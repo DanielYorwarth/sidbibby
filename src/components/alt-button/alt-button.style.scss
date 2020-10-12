@@ -1,0 +1,27 @@
+.alt-button {
+  will-change: transform;
+  &__icon {
+    will-change: transform;
+  }
+  &__wrapper {
+    display: inherit;
+  }
+  &:hover {
+    .alt-button {
+      &__icon {
+        transform: translateX(10px);
+      }
+      &__line {
+        width: calc(100% + 10px);
+        box-shadow: 0px 5px 5px rgba(0,0,0,0.2);
+      }
+    }
+  }
+}
+
+@media(max-width: 797px) {
+  .alt-button {
+    width: fit-content;
+    margin: auto;
+  }
+}

@@ -1,0 +1,24 @@
+.sector-cta {
+  will-change: transform;
+  transition: 0.3s;
+  &__content, &__bgcolor, &__button {
+    transition: 0.3s
+  }
+  &__button {
+    will-change: transform;
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  &:hover { 
+    transform: scale(1.05);
+    .sector-cta { 
+      &__bgcolor {
+        opacity: 0.8;
+      }
+      &__button {
+        opacity: 1;
+        transform: translateY(0px);
+      }
+    }
+  }
+}

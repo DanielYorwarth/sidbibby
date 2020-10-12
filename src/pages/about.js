@@ -1,73 +1,152 @@
 import React from "react"
 import { graphql, StaticQuery } from "gatsby"
-import Img from "gatsby-image"
+import { Breadcrumb } from 'gatsby-plugin-breadcrumb'
 
-import Layout from "../components/layout"
+import Layout from "../components/layout/layout"
 import SEO from "../components/seo"
+import SubHero from '../components/sub-hero/sub-hero';
+import TrustPilotBlock from '../components/trustpilot-block/trustpilot-block';
+import ImageWithText from '../components/layout/image-with-text/image-with-text';
+import SideMenu from '../components/side-menu/side-menu';
+import CtaBlock from '../components/cta-block/cta-block';
+import List from '../components/list/list';
+import ListItem from '../components/list-item/list-item';
+import AwardsWrapper from '../components/awards-wrapper/awards-wrapper';
 
-import "../utils/normalize.css"
-import "../utils/css/screen.css"
+import logo from '../images/logo.svg';
 
-const AboutPage = ({ data }, location) => {
-  const siteTitle = data.site.siteMetadata.title
-
+const BlogIndex = ({ data }, location) => {
   return (
-    <Layout title={siteTitle}>
-      <SEO title="ABout" keywords={[`blog`, `gatsby`, `javascript`, `react`]} />
-
-      <article className="post-content page-template no-image">
-        <div className="post-content-body">
-          <h2 id="clean-minimal-and-deeply-customisable-london-is-a-theme-made-for-people-who-appreciate-simple-lines-">
-            Clean, minimal, and deeply customisable. London is a theme made for
-            people who appreciate simple lines.
-          </h2>
-          <figure className="kg-card kg-image-card kg-width-full">
-            <Img
-              fluid={data.benchAccounting.childImageSharp.fluid}
-              className="kg-image"
-            />
-            <figcaption>Large imagery is at the heart of this theme</figcaption>
-          </figure>
-          <h3 id="dynamic-styles">Dynamic styles</h3>
-          <p>
-            London comes with photo-centric main layout best suited to
-            photography, graphics portfolios and other image-heavy uses.
-          </p>
-          <p>
-            Both post and page templates are light and minimal, with all the
-            focus on the content while the design of the theme gets out of the
-            way. Beneath the hood, London enjoys the full power of the{" "}
-            <a href="https://docs.ghost.org/api/handlebars-themes/">
-              Ghost Handlebars Theme API
-            </a>{" "}
-            to provide limitless customisation options and dynamic styles.
-          </p>
-          <p>
-            Don't forget to check out the{" "}
-            <a href="https://docs.ghost.org/integrations/">
-              Ghost Integrations Directory
-            </a>{" "}
-            for more ways to integrate Ghost with your favourite services.
-          </p>
+    <Layout>
+      <SEO
+        title="About"
+        keywords={[`About SidBibby Landscaping & Turf`]}
+      />
+      <SubHero 
+        subTitle="SIDBIBBY"
+        title="ABOUT"
+        color="#ffffff"
+        bgImage={data.headerBG.childImageSharp.fluid}
+      />
+      <div className="flex flex-wrap max-w-screen-2xl mx-auto px-4 md:px-8 mb-8 md:mb-16">
+        <Breadcrumb location={location} crumbLabel="ABOUT" />
+      </div>
+      <div className="max-w-screen-2xl mx-auto flex flex-wrap items-end mb-12 md:mb-24">
+        <div className="w-full md:w-2/3 mb-10 md:mb-0">
+          <ImageWithText 
+            maxWidth="max-w-screen-2xl"
+            align="items-end"
+            image={data.about.childImageSharp.fluid}
+            text={
+              <p>
+                <strong>Sid Bibby Turf & Landscaping Ltd</strong> is a well-established landscaping company based in Sutton Cambridgeshire. We have built up an enviable reputation since 1998. Sid Bibby started this company with his wife, and it has only grown since. We are certainly a family orientated business and pleased to have driven employees some of whom have been with us for over 10 years who we treat like family. We pride ourselves on the best customer service and maintain the highest quality of work. 
+              </p>
+            }
+            noMargin
+          />
         </div>
-      </article>
+        <div className="md:pl-8 lg:pl-16 px-4 md:px-8 w-full md:w-1/3">
+          <SideMenu
+            menuItems={[
+              {
+                text: "ABOUT",
+                to: "/about"
+              },
+              {
+                text: "FAQ",
+                to: "/about/faq"
+              },
+              {
+                text: "TURF CARE",
+                to: "/about/turf-care"
+              },
+              {
+                text: "CONTACT",
+                to: "/contact"
+              },
+            ]}
+          />
+        </div>
+      </div>
+      <div className="flex flex-wrap max-w-screen-2xl mx-auto px-4 md:px-8 mb-12 md:mb-16">
+        <div className="w-full md:w-1/3 md:pr-8">
+          <h5 className="font-semibold text-lg mb-5">SID BIBBY PROUDLY MAINTAIN THIRD PARTY ACCREDITATION INCLUDING:</h5>
+          <ListItem text="ISO9001 - Quality Management System" />
+          <ListItem text="ISO14001 - Environment Management System" />
+          <ListItem text="ISO45001 - OH&S Management System" />
+        </div>
+        <div className="w-full md:w-2/3">
+        <List 
+            title="WHY WE STAND OUT:"
+            listItems={[
+              'Award-winning service comes as standard.',
+              'Specialists in the trade',
+              'Small enough to care, large enough to deliver an excellent finished product',
+              'Fantastic customer support',
+              'Flexible & affordable pricing',
+              'Provide excellent customer service before, during and after works'
+            ]}
+          />
+        </div>
+      </div>
+      <AwardsWrapper  
+        title="AWARDS"
+        text="Take a look at some of the awards we've received"
+        awards={[
+          {
+            title: "Pride in The Job Awards",
+            text: "Taylor Wimpey South Midlands Castlemead Pitstone 2010"
+          },
+          {
+            title: "Pride in The Job Awards",
+            text: "Taylor Wimpey East Anglia Lion Mills Soham 2010"
+          },
+          {
+            title: "Pride in The Job Awards",
+            text: "Taylor Wimpey East Anglia-Knights Park, St Neots-22nd August 2014"
+          },
+          {
+            title: "Pride in The Job Awards",
+            text: "Crest Nicholson 2019 & 2020"
+          },
+        ]}
+      />
+      <CtaBlock 
+        text="GET A FREE QUOTE OR CALL US"
+        phone="01353 777 909"
+        link={{
+          text: "FREE QUOTE",
+          to: "/quote"
+        }}
+      />
+      <TrustPilotBlock 
+        marginBottom
+        lightShadow
+        title="CHECK OUT OUR REVIEWS"
+        text={<span>Rated 4.5/5 <b>"Excellent"</b> <br/>with over 300 reviews.</span>}
+        link={{
+          text: "View All",
+          to: '/',
+          color: '#D8574A'
+        }}
+      />
     </Layout>
   )
 }
 
 const indexQuery = graphql`
   query {
-    site {
-      siteMetadata {
-        title
+    headerBG: file(relativePath: { eq: "hero.jpg" }) {
+      childImageSharp {
+        fluid(quality: 100, maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
       }
     }
-    benchAccounting: file(
-      relativePath: { eq: "bench-accounting-49909-unsplash.jpg" }
-    ) {
+    about: file(relativePath: { eq: "seating-area.jpg" }) {
       childImageSharp {
-        fluid(maxWidth: 1360) {
-          ...GatsbyImageSharpFluid
+        fluid(quality: 100, maxWidth: 1200) {
+          ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
@@ -78,7 +157,7 @@ export default props => (
   <StaticQuery
     query={indexQuery}
     render={data => (
-      <AboutPage location={props.location} data={data} {...props} />
+      <BlogIndex location={props.location} props data={data} {...props} />
     )}
   />
 )
