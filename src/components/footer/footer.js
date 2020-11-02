@@ -52,7 +52,7 @@ const Footer = ({menu}) => (
       </div>
       <div className="lg:flex flex-wrap justify-between text-xs max-w-screen-2xl mx-auto py-4 md:py-8 w-full">
         <div className="mb-4 lg:mb-0">
-          © 2019 SID BIBBY TURF AND LANDSCAPING LTD <span className="px-2 hidden md:inline-block">|</span> <span className="block md:inline-block">DESIGNED BY <span className="pl-2 font-bold text-secondary">VOLLEY.DIGITAL</span></span>
+          © {new Date().getFullYear()} SID BIBBY TURF AND LANDSCAPING LTD <span className="px-2 hidden md:inline-block">|</span> <span className="block md:inline-block">DESIGNED BY <span className="pl-2 font-bold text-secondary">VOLLEY.DIGITAL</span></span>
         </div>
         <div>
           <Link to="/privacy-policy">PRIVACY POLICY</Link><span className="px-2">|</span><Link to="/terms-and-conditions">TERMS & CONDITIONS</Link><span className="px-2">|</span><Link to="/enviro-policy">ENVIRO POLICY</Link>
