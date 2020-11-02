@@ -41,7 +41,7 @@ const Footer = ({menu}) => (
           </div>  
           <div className="w-full lg:flex-1 flex flex-col lg:items-end">
             <div className="mb-10">
-            <Socials twitter="https://twitter.com/SidBibbyTurf" facebook="https://www.facebook.com/sidbibbyturf/" instagram="https://www.instagram.com/sidbibby_landscaping/" />
+            <Socials twitter="https://twitter.com/SidBibbyTurf" facebook="https://www.facebook.com/sidbibbylandscaping/" instagram="https://www.instagram.com/sidbibby_landscaping/" />
             </div>
             <FooterMenu menu={menu}/>
             <p className="lg:text-right max-w-2xl">Sid Bibby Turf and Landscaping Ltd, <br/>

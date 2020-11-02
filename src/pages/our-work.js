@@ -177,7 +177,7 @@ const BlogIndex = ({ data }, location) => {
         marginBottom
         lightShadow
         title="CHECK OUT OUR REVIEWS"
-        text={<span>Rated 4.5/5 <b>"Excellent"</b> <br/>with over 300 reviews.</span>}
+        text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
           to: '/',

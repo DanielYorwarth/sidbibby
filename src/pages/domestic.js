@@ -97,7 +97,7 @@ const BlogIndex = ({ data }, location) => {
         marginBottom
         lightShadow
         title="CHECK OUT OUR REVIEWS"
-        text={<span>Rated 4.5/5 <b>"Excellent"</b> <br/>with over 300 reviews.</span>}
+        text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
           to: '/',
@@ -166,7 +166,7 @@ const indexQuery = graphql`
         }
       }
     }
-    lowmaint: file(relativePath: { eq: "turf-intro-image.jpg" }) {
+    lowmaint: file(relativePath: { eq: "art-turf.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp

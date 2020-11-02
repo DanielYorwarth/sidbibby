@@ -86,9 +86,9 @@ const BlogIndex = ({ data }, location) => {
       tag: 'domestic'
     },
     {
-      title: 'Block Paving',
+      title: 'Decking, Planting & Turf',
       image: data.worktwo.childImageSharp.fluid,
-      tag: 'domestic'
+      tag: 'commercial'
     },
     {
       title: 'Garden Design',
@@ -117,10 +117,10 @@ const BlogIndex = ({ data }, location) => {
       />
       <TrustPilotBlock 
         title="CHECK OUT OUR REVIEWS"
-        text={<span>Rated 4.5/5 <b>"Excellent"</b> <br/>with over 300 reviews.</span>}
+        text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -294,7 +294,7 @@ const indexQuery = graphql`
         }
       }
     }
-    lowmaint: file(relativePath: { eq: "turf-intro-image.jpg" }) {
+    lowmaint: file(relativePath: { eq: "art-turf.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
@@ -315,7 +315,7 @@ const indexQuery = graphql`
         }
       }
     }
-    worktwo: file(relativePath: { eq: "domestic/Block Paving.jpg" }) {
+    worktwo: file(relativePath: { eq: "commercial/Turf With Surrounding Planting.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
