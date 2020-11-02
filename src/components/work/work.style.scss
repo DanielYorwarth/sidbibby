@@ -1,3 +1,5 @@
+@import '../../../node_modules/simplelightbox/src/simple-lightbox.scss';
+
 .work {
   height: 20vw;
   max-height: 400px;
@@ -14,5 +16,14 @@
 @media (max-width: 767px) {
   .work {
     height: 300px;
+  }
+}
+
+.sl-wrapper {
+  outline: none;
+  .sl-navigation {
+    button {
+      outline: none;
+    }
   }
 }

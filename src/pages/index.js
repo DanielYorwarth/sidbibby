@@ -81,20 +81,20 @@ const BlogIndex = ({ data }, location) => {
   ];
   let ourWork = [
     {
-      title: 'SWIRL PATIO',
+      title: 'Modern BBQ Area',
       image: data.workone.childImageSharp.fluid,
       tag: 'domestic'
     },
     {
-      title: 'BUSINESS PARK',
+      title: 'Block Paving',
       image: data.worktwo.childImageSharp.fluid,
-      tag: 'commercial'
+      tag: 'domestic'
     },
     {
-      title: 'WATER FEATURE',
+      title: 'Garden Design',
       image: data.workthree.childImageSharp.fluid,
       tag: 'domestic'
-    }
+    },
   ]
   return (
     <Layout>
@@ -308,21 +308,21 @@ const indexQuery = graphql`
         }
       }
     }
-    workone: file(relativePath: { eq: "placeholder.jpg" }) {
+    workone: file(relativePath: { eq: "domestic/Modern BBQ Area.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    worktwo: file(relativePath: { eq: "commercial-landscaping-cambridgeshire-bg.jpg" }) {
+    worktwo: file(relativePath: { eq: "domestic/Block Paving.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
-    workthree: file(relativePath: { eq: "water-feautres-cambridgeshire.jpg" }) {
+    workthree: file(relativePath: { eq: "domestic/Garden Design.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
