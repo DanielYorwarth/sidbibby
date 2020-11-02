@@ -92,21 +92,21 @@ const indexQuery = graphql`
   query {
     headerBG: file(relativePath: { eq: "turf.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     turfing: file(relativePath: { eq: "shaped-turf.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     testimonialsBg: file(relativePath: { eq: "testimonials-bg.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

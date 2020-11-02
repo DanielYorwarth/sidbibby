@@ -138,14 +138,14 @@ const indexQuery = graphql`
   query {
     headerBG: file(relativePath: { eq: "hero.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     about: file(relativePath: { eq: "seating-area.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 500) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

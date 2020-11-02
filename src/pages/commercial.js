@@ -143,70 +143,70 @@ const indexQuery = graphql`
   query {
     domestic: file(relativePath: { eq: "commercial-service-page.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     commercial2: file(relativePath: { eq: "feature-patio.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     turfing: file(relativePath: { eq: "turf-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     paving: file(relativePath: { eq: "paving-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     timber: file(relativePath: { eq: "decking-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     planting: file(relativePath: { eq: "planting-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     fencing: file(relativePath: { eq: "fencing-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     waterfeatures: file(relativePath: { eq: "water-feature-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     multilvl: file(relativePath: { eq: "garden-design-intro.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     lowmaint: file(relativePath: { eq: "turf-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

@@ -226,84 +226,84 @@ const indexQuery = graphql`
     }
     hero: file(relativePath: { eq: "front-page-header.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 60, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     domestic: file(relativePath: { eq: "domestic-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     commercial: file(relativePath: { eq: "commercial-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     turfing: file(relativePath: { eq: "turf-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     paving: file(relativePath: { eq: "paving-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     timber: file(relativePath: { eq: "decking-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     planting: file(relativePath: { eq: "planting-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     fencing: file(relativePath: { eq: "fencing-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     waterfeatures: file(relativePath: { eq: "water-feature-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     multilvl: file(relativePath: { eq: "garden-design-intro.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     lowmaint: file(relativePath: { eq: "turf-intro-image.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
+        fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     aboutbg: file(relativePath: { eq: "why-choose-sid-bibby.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1800) {
+        fluid(quality: 50, maxWidth: 1200) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
