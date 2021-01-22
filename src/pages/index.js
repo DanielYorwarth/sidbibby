@@ -54,9 +54,14 @@ const BlogIndex = ({ data }, location) => {
       image: data.fencing.childImageSharp.fluid
     },
     {
-      title: "WATER FEATURES",
-      link: "/services/water-features",
+      title: "RESIN",
+      link: "/services/resin",
       image: data.waterfeatures.childImageSharp.fluid
+    },
+    {
+      image: data.showHome.childImageSharp.fluid,
+      title: 'SHOW HOMES',
+      link: '/services/show-homes',
     },
     {
       title: "DESIGN SERVICE",
@@ -226,7 +231,7 @@ const indexQuery = graphql`
     }
     hero: file(relativePath: { eq: "front-page-header.jpg" }) {
       childImageSharp {
-        fluid(quality: 60, maxWidth: 1920) {
+        fluid(quality: 80, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
@@ -294,6 +299,13 @@ const indexQuery = graphql`
         }
       }
     }
+    showHome: file(relativePath: { eq: "commercial-service-page.jpg" }) {
+      childImageSharp {
+          fluid(quality: 50, maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+          }
+      }
+    }
     lowmaint: file(relativePath: { eq: "art-turf.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 600) {
@@ -308,7 +320,7 @@ const indexQuery = graphql`
         }
       }
     }
-    workone: file(relativePath: { eq: "domestic/Modern BBQ Area.jpg" }) {
+    workone: file(relativePath: { eq: "domestic/Modern-BBQ-Area.jpg" }) {
       childImageSharp {
         fluid(quality: 100, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp

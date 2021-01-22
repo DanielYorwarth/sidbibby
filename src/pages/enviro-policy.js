@@ -14,7 +14,7 @@ class Enviro extends React.Component {
             title="Enviro Policy"
             color="#044122"
         />
-        <div className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 md:py-24">
+        <div className="blog mx-auto max-w-screen-xl px-4 md:px-8   mb-16 md:mb-24 md:pt-5">
             As a Landscaping and Design Centre Sid Bibby Turf and Landscaping Ltd is committed to preserving and protecting our environment for our future generations.
             <br/><br/>
             We have already begun in our quest to cause as little impact on the environment that we work in. Our landscapers are fully trained to constantly be aware of the impact of pollution and contamination and the effects that this has on the land and wildlife. Training and implementing our practices is done as part of our normal working week. Complying with all relevant environmental legislation.

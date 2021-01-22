@@ -32,19 +32,32 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText 
         maxWidth="max-w-6xl"
         image={data.turfing.childImageSharp.fluid}
+        title="Perfect if your looking to revamp your lawn."
         text={
           <p>
-            Sid Bibby’s source turf from a quality local turf supplier. 
+            At Sid Bibby’s Turf and Landscaping we cover every aspect of turf laying including a full ground preparation and laying service. We can remove your old lawn, rotavate the soil and level the ground before we lay your luscious new lawn. We pride ourselves on giving you the best service, our experienced operatives have the skill and knowledge to delivery high quality finish to every job.
             <br/><br/>
-            It’s carefully grown by company with three generations of experience. 
+            A newly turfed lawn can transform a tired garden into an attractive outdoor space. We source turf from a quality local turf supplier, which is carefully grown by a company with three generations of experience. Sid Bibby’s have a strong relationship with our turf suppliers and have worked with them from the start of our business. 
+            <br/><br/>
+            The turf is exceedingly popular and most widely used being a general, all-purpose, cultivated, weed-free lawn turf. This turf is ideal for varied uses such as domestic and commercial gardens in all different shapes and sizes.  
+          </p>
+        }
+      />
+      <ImageWithText 
+        imageRight
+        maxWidth="max-w-6xl"
+        image={data.turfing2.childImageSharp.fluid}
+        image2={data.turfing3.childImageSharp.fluid}
+        title="Local, affordable and easy."
+        text={
+          <p>
+            Our Turf is from a quality local turf supplier, that have carefully grown and manage Turf production for three generations of experience.
             <br/><br/>
             The turf is a medium grade and is ideal for medium to hard wearing lawns. It contains about 15 – 20% Dwarf Rye Grass and 30 – 40% Creeping Red Fescue, so it gives the look of a fine turf but is harder wearing and easier to look after.
             <br/><br/>
-            The turf is exceedingly popular and most widely used being a general, all-purpose, cultivated, weed-free lawn turf. This turf is ideal for domestic and commercial front and rear gardens.
-            <br/><br/>
-            Please note, Sid Bibby’s only offer a SUPPLY AND LAY service using CTN Turf.
-            <br/><br/>
             If you are looking for a SUPPLY ONLY service, we would recommend you contact CTN Turf direct (01353 778404)
+            <br/><br/>
+            Please see our <Link className="text-secondary font-bold hover:opacity-75 duration-300" to="/about/turf-care">turf care guide</Link> for any questions or queries you may have about the upkeep of your lawn.
             <br/><br/>
             For a free quote, contact us today and fill out a <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/quote">quick and easy quote form!</Link>
           </p>
@@ -80,7 +93,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -98,6 +111,20 @@ const indexQuery = graphql`
       }
     }
     turfing: file(relativePath: { eq: "shaped-turf.jpg" }) {
+      childImageSharp {
+        fluid(quality: 50, maxWidth: 800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    turfing2: file(relativePath: { eq: "domestic/Turf.jpg" }) {
+      childImageSharp {
+        fluid(quality: 50, maxWidth: 800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    turfing3: file(relativePath: { eq: "commercial/Barking-chipping-and-turf.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp

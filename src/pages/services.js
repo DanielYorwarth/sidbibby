@@ -79,16 +79,29 @@ const BlogIndex = ({ data }, location) => {
       },
     },
     {
-      image: data.waterfeatures.childImageSharp.fluid,
-      title: 'WATER FEATURES',
-      text: 'We work with domestic and commercial clients to create ponds and water features to add more texture, colouring or wildlife for all nature lovers.',
+      image: data.showHome.childImageSharp.fluid,
+      title: 'SHOW HOMES',
+      text: 'With over 20 years’ experience we pride ourselves on our show homes landscaping to give a lasting impression to the potential customers for development homes.',
       link1: {
         text: 'FREE QUOTE',
         to: '/quote'
       },
       link2: {
         text: 'Learn more',
-        to: '/services/water-features'
+        to: '/services/show-homes'
+      },
+    },
+    {
+      image: data.showHome.childImageSharp.fluid,
+      title: 'RESIN',
+      text: 'Resin is a great, SUDS compliant product that is used on driveways and can be incorporated into garden design which lasts up to 25-years.',
+      link1: {
+        text: 'FREE QUOTE',
+        to: '/quote'
+      },
+      link2: {
+        text: 'Learn more',
+        to: '/services/resin'
       },
     },
     {
@@ -116,7 +129,20 @@ const BlogIndex = ({ data }, location) => {
         text: 'Learn more',
         to: '/services/artificial-turf'
       },
-    }
+    },
+    {
+      image: data.waterfeatures.childImageSharp.fluid,
+      title: 'WATER FEATURES',
+      text: 'We work with domestic and commercial clients to create ponds and water features to add more texture, colouring or wildlife for all nature lovers.',
+      link1: {
+        text: 'FREE QUOTE',
+        to: '/quote'
+      },
+      link2: {
+        text: 'Learn more',
+        to: '/services/water-features'
+      },
+    },
   ];
 
 
@@ -134,7 +160,7 @@ const BlogIndex = ({ data }, location) => {
       <div className="flex flex-wrap max-w-screen-2xl mx-auto px-4 md:px-8 mb-8 md:mb-16">
         <Breadcrumb location={location} crumbLabel="Services" />
       </div>
-      <Intro text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. " />
+      <Intro text="At Sid Bibby Turf and Landscaping we are proud of the standard we hold across all our services. Whether it is the product or the labour, we pride ourselves in offering clients the best service as possible." />
       <ServicesIntro 
         services={services}
       />
@@ -145,7 +171,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -216,6 +242,13 @@ const indexQuery = graphql`
         fluid(quality: 50, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
         }
+      }
+    }
+    showHome: file(relativePath: { eq: "commercial/Decking-planting-and-turf.jpg" }) {
+      childImageSharp {
+          fluid(quality: 50, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+          }
       }
     }
   }

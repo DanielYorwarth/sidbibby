@@ -9,6 +9,7 @@ import TrustPilotBlock from '../components/trustpilot-block/trustpilot-block';
 import Intro from '../components/intro/intro';
 import ImageWithText from '../components/layout/image-with-text/image-with-text';
 import ServicesList from '../components/services-list/services-list';
+import CtaBlock from '../components/cta-block/cta-block';
 
 const BlogIndex = ({ data }, location) => {
 
@@ -39,8 +40,8 @@ const BlogIndex = ({ data }, location) => {
       image: data.fencing.childImageSharp.fluid
     },
     {
-      title: "WATER FEATURES",
-      link: "/services/water-features",
+      title: "RESIN",
+      link: "/services/resin",
       image: data.waterfeatures.childImageSharp.fluid
     },
     {
@@ -73,7 +74,8 @@ const BlogIndex = ({ data }, location) => {
       <Intro text="We are proud to offer our expertise in hard and soft landscape installation to private customers. " />
       <ImageWithText 
         maxWidth="max-w-6xl"
-        image={data.domestic.childImageSharp.fluid}
+        image={data.intro.childImageSharp.fluid}
+        title="Professional & expert landscapers"
         text={
           <p>
             We are proud to offer expertise in hard and soft landscape installation to domestic customers.
@@ -81,12 +83,29 @@ const BlogIndex = ({ data }, location) => {
             At Sid Bibby’s we can help create your dream garden with our team of experienced landscapers.
             <br/><br/>
             We understand how important an attentive and focused approach is when it comes to creating the ideal garden space. 
-            <br/><br/>
-            We can do small in-house landscape design service, but we do have strong relationships with leading landscape designers and architects and can recommend these to you.
-            <br/><br/>
-            Please feel free to Contact us <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/contact">through our website</Link>, Social media or Phone Number <b>01353 777909</b>
           </p>
         }
+      />
+       <ImageWithText 
+        imageRight
+        maxWidth="max-w-6xl"
+        image={data.domestic.childImageSharp.fluid}
+        title="Flexible and affordable"
+        text={
+          <p>
+            We can do small in-house landscape design service, but we do have strong relationships with leading landscape designers and architects who we work well with.
+            <br/><br/>
+            For a free quote, contact us today and fill out a <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/quote">quick and easy quote form!</Link>
+          </p>
+        }
+      />
+      <CtaBlock 
+        text="GET A FREE QUOTE OR CALL US"
+        phone="01353 777 909"
+        link={{
+          text: "FREE QUOTE",
+          to: "/quote"
+        }}
       />
       <ServicesList 
         title="OUR SERVICES"
@@ -100,7 +119,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -118,6 +137,13 @@ const indexQuery = graphql`
       }
     }
     turfing: file(relativePath: { eq: "turf-intro-image.jpg" }) {
+      childImageSharp {
+        fluid(quality: 50, maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    intro: file(relativePath: { eq: "domestic/Seating-BBQ-area.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp

@@ -14,7 +14,7 @@ class Privacy extends React.Component {
             title="Privacy Policy"
             color="#044122"
         />
-        <div className="mx-auto max-w-screen-xl px-4 md:px-8 py-16 md:py-24">
+        <div className="blog mx-auto max-w-screen-xl px-4 md:px-8  mb-16 md:mb-24 md:pt-5">
             <h1>Privacy Policy for Sid Bibby Turf and Landscaping Ltd</h1>
 
             <p>At Sid Bibby Turf and Landscaping, accessible from http://www.sidbibby.co.uk/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Sid Bibby Turf and Landscaping and how we use it.</p>

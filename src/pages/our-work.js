@@ -153,7 +153,7 @@ const BlogIndex = ({ data }, location) => {
       <div className="flex flex-wrap max-w-screen-2xl mx-auto px-4 md:px-8 mb-8 md:mb-16">
         <Breadcrumb location={location} crumbLabel="OUR WORK" />
       </div>
-      <Intro text="Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat." />
+      <Intro text="Our work ranges from commercial show homes, completing individual plots, the POS areas around site to domestic work that start with small turfing jobs scaling to extensive dream gardens." />
       <div className="workgallery max-w-screen-2xl mx-auto mb-12 md:mb-24 px-2 md:px-4">
         {ourWork &&
           <div className="flex flex-wrap mb-10">
@@ -180,7 +180,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -281,7 +281,7 @@ const indexQuery = graphql`
         }
       }
     }
-    workoneD: file(relativePath: { eq: "domestic/Modern BBQ Area.jpg" }) {
+    workoneD: file(relativePath: { eq: "domestic/Modern-BBQ-Area.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp

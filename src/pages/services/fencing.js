@@ -32,6 +32,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.turfing.childImageSharp.fluid}
+        title="Create your own private hub"
         text={
           <p>
             At Sid Bibby’s we have an extensive range of garden fencing in popular styles to construct a secure perimeter.
@@ -39,6 +40,19 @@ const BlogIndex = ({ data }, location) => {
             Make your garden a private hub with trellis and screening.
             <br/><br/>
             Fencing provides the framework to your garden and property. We have many years’ experience in the installation of fencing and gates. A new back gate can update the look or the security for your home, to a complete installation of new European screens around your boundary. The choices of fencing and gates is vast, we have samples that you can view in our show gardens where you can see them in a natural environment against planting and slabs. 
+          </p>
+        }
+      />
+       <ImageWithText
+        imageRight
+        maxWidth="max-w-6xl"
+        image={data.fencing.childImageSharp.fluid}
+        title="Contemporary Screens & Pergolas "
+        text={
+          <p>
+            A new popular form of fencing is the contemporary screen, which really sets the scene for your garden.
+            <br/><br/>
+            Pergolas are really popular, also with an additional roof to create an all weather area to extend your garden use.
             <br/><br/>
             For a free quote, contact us today and fill out a <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/quote">quick and easy quote form!</Link>
           </p>
@@ -74,7 +88,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -92,6 +106,13 @@ const indexQuery = graphql`
       }
     }
     turfing: file(relativePath: { eq: "fencing-image.jpg" }) {
+      childImageSharp {
+        fluid(quality: 50, maxWidth: 800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    fencing: file(relativePath: { eq: "fencing-service-page.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp

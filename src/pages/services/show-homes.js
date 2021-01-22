@@ -16,44 +16,41 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout>
       <SEO
-        title="Artificial Turf"
-        keywords={[`Artificial Turf Cambridgeshire`, `Local Artificial Turf`]}
+        title="Show Homes"
+        keywords={[`Show Home Garden Design`, `Commercial Show Home Gardens`]}
       />
       <SubHero 
         subTitle="SERVICES"
-        title="ARTIFICIAL TURF"
+        title="SHOW HOMES"
         color="#ffffff"
         bgImage={data.headerBG.childImageSharp.fluid}
       />
       <div className="flex flex-wrap max-w-screen-2xl mx-auto px-4 md:px-8 mb-8 md:mb-16">
-        <Breadcrumb location={location} crumbLabel="ARTIFICIAL TURF" />
+        <Breadcrumb location={location} crumbLabel="SHOW HOMES" />
       </div>
-      <Intro text="Artificial turf is a great alternative to natural lawn for anyone that it after a garden that can be easily maintained. We have wide variety of options for artificial turf from the softness of the turf, to the grade, all can be chosen by you give you exactly what you desire."/>
+      <Intro text="With over 20 years’ experience we pride ourselves on our show homes landscaping to give a lasting impression to the potential customers for development homes."/>
       <ImageWithText
         maxWidth="max-w-6xl"
-        image={data.turfing.childImageSharp.fluid}
-        title="No maintenance & looks just as good as real turf."
+        image={data.showHome.childImageSharp.fluid}
+        title="Over 20 years experience"
         text={
           <p>
-            Artificial turf is a great alternative to natural lawn for anyone wanting a garden that requires virtually no maintenance! 
+            Installing Show Home gardens is where we excel. For over 20 years Sid Bibby Turf and Landscape has been installing excellent landscaping to development sales area for many different companies.
             <br/><br/>
-            We are able to supply and lay a wide variety – soft feel, thick graded, short pile – we’re confident we can give you exact look and feel you desire! Visit our show gardens to view samples from our suppliers.
-            <br/><br/>
-            Please note, we DO NOT provide a SUPPLY ONLY service. Please view our suppliers websites which may assist in helping find the stockist closest to you if you require this service.
-            <br/><br/>
+            We understand that creating a lasting impression is so important so we provide a full design for each scheme, because a show home must be exactly that; to show what kind of fabulous homes you are building, whilst a garden cannot distract from a well-built house, first impressions do matter. So, a well-designed and well-presented show garden, gives your customer the idea and incentives to own that home.
           </p>
         }
       />
       <ImageWithText
       imageRight
         maxWidth="max-w-6xl"
-        image={data.turfing.childImageSharp.fluid}
-        title="No weeds & great for pets!"
+        image={data.showHome2.childImageSharp.fluid}
+        title="maintenance & ongoing care"
         text={
           <p>
-            Gardens with artificial turf require little or no attention whilst remaining tidy and attractive. If a low maintenance garden is what you are looking for, we can also offer many different gravels, slate chips and mulches. All laid on top of weed suppressant membrane which will reduce weed growth to keep your garden looking perfectly preserved all year round!
+            At Sid Bibby’s we can also set up a maintenance package for the sales area. We will advise and install seasonal bedding and all other elements to the garden looking fresh.
             <br/><br/>
-            Artificial can also be great for pet owners, especially dogs! Rest assured; artificial grass is 100% animal friendly. No more grass staining or digging disasters! Not to mention it makes cleaning up any pet ‘messes’ so much easier. 
+            We also are very thoughtful about designing the initial cabin area that the development site will use to show what theme will potentially run throughout site. Of course, following the cabin the sales area and street scene must create the idea of customer living there.
             <br/><br/>
             For a free quote, contact us today and fill out a <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/quote">quick and easy quote form!</Link>
           </p>
@@ -106,12 +103,19 @@ const indexQuery = graphql`
         }
       }
     }
-    turfing: file(relativePath: { eq: "art-turf.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_withWebp
+    showHome: file(relativePath: { eq: "commercial-service-page.jpg" }) {
+        childImageSharp {
+            fluid(quality: 50, maxWidth: 600) {
+            ...GatsbyImageSharpFluid_withWebp
+            }
         }
-      }
+    }
+    showHome2: file(relativePath: { eq: "commercial/Decking-planting-and-turf.jpg" }) {
+        childImageSharp {
+            fluid(quality: 50, maxWidth: 600) {
+            ...GatsbyImageSharpFluid_withWebp
+            }
+        }
     }
     testimonialsBg: file(relativePath: { eq: "testimonials-bg.jpg" }) {
       childImageSharp {

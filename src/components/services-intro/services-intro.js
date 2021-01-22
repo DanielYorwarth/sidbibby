@@ -23,7 +23,7 @@ const ServicesIntro = ({services}) => (
                 <p className="mb-6">
                 {service.text}
                 </p>
-                <div className="flex flex-wrap items-end">
+                <div className="flex flex-wrap items-start">
                   <div className="pr-8">
                     <Button text={service.link1.text} link={service.link1.to} internal/>
                   </div>
@@ -42,7 +42,7 @@ const ServicesIntro = ({services}) => (
                 <p className="mb-6">
                 {service.text}
                 </p>
-                <div className="flex flex-wrap items-end">
+                <div className="flex flex-wrap items-start">
                   <div className="pr-8">
                     <Button text={service.link1.text} link={service.link1.to} internal/>
                   </div>

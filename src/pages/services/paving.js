@@ -31,9 +31,8 @@ const BlogIndex = ({ data }, location) => {
       <Intro text="We offer natural paving, resin, driveway blocks and many more! We use exceptionally reliable companies such as Talasey and Marshalls to supply our wide range of options to help you choose your desired look for the garden." />
       <ImageWithText 
         maxWidth="max-w-6xl"
-        align="items-start"
         image={data.turfing.childImageSharp.fluid}
-        image2={data.driveway.childImageSharp.fluid}
+        title="Great, Fast and Reliable."
         text={
           <p>
             We offer a supply and lay service using natural paving, porcelain, resin, driveway blocks and much more! 
@@ -42,20 +41,46 @@ const BlogIndex = ({ data }, location) => {
             <br/><br/>
             Please note, <strong>we DO NOT provide a SUPPLY ONLY service</strong>. Please view our supplier’s websites which may assist in helping find the stockist closest to you if you require this service.
             <br/><br/>
-            <strong>We also support local companies as much as we can.</strong>
-            <br/><br/>
+          </p>
+        }
+      />
+      <ImageWithText 
+        imageRight
+        maxWidth="max-w-6xl"
+        image={data.driveway.childImageSharp.fluid}
+        title="Supporting local companies."
+        text={
+          <p>
             The patio you choose sets the trend for the rest of the garden, i.e. levels, shapes and the overall design concept. Once you have this in place, the rest of the garden will evolve easily. Therefore, the patio is always the first structure to be put in place in the garden.
             <br/><br/>
             If you are looking to redesign the front area of your house, a resin driveway provides a contemporary look and can complement any type of house! Equally, the right driveway block can really make your house stand out!
             <br/><br/>
-            We can supply and lay almost any type of paving you require. By creatively contrasting colours together using paving slabs and blocks, you can create a wonderful looking patio or driveway. Our landscaping specialists will guide you all the way from design to construction and to give you the most amazing completed design! 
-            <br/><br/>
-            Customers are welcome to come and view most products in our show gardens, open from Monday-Friday 10am-4pm. We encourage to call our office to book a slot to ensure we have a member of staff available to show you around.
-            <br/><br/>
-            <strong>Sustainability</strong> <br/>
-            Ethically sourced materials, an area Sid Bibby’s is expanding to customers who wish to be made aware of the issues of supply of stone from overseas when they are choosing paving. Through the Ethical Trading Initiative (ETI) we have learnt how to respond to our customers guaranteeing their choice is right.
-            <br/><br/>
             For a free quote, contact us today and fill out a <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/quote">quick and easy quote form!</Link>
+          </p>
+        }
+      />
+      <ImageWithText 
+        maxWidth="max-w-6xl"
+        image={data.show.childImageSharp.fluid}
+        title="Come and visit us!"
+        text={
+          <p>
+           Our landscaping specialists will guide you all the way from design to construction and to give you the most amazing completed design! 
+            <br/><br/>
+            Customers are welcome to come and view most products in our show gardens, open from Monday-Friday 10am-4pm. We encourage to call our office on: <a className="text-secondary font-bold hover:opacity-75 duration-300" href="tel:01353777909">01353 777 909</a> to book a slot to ensure we have a member of staff available to show you around.
+            <br/><br/>
+            We can supply and lay almost any type of paving you require. By creatively contrasting colours together using paving slabs and blocks, you can create a wonderful looking patio or driveway. 
+          </p>
+        }
+      />
+      <ImageWithText 
+        imageRight
+        maxWidth="max-w-6xl"
+        image={data.sustain.childImageSharp.fluid}
+        title="Sustainability"
+        text={
+          <p>
+            Ethically sourced materials, an area Sid Bibby’s is expanding to customers who wish to be made aware of the issues of supply of stone from overseas when they are choosing paving. Through the Ethical Trading Initiative (ETI) we have learnt how to respond to our customers guaranteeing their choice is right.
           </p>
         }
       />
@@ -89,7 +114,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -116,6 +141,20 @@ const indexQuery = graphql`
     driveway: file(relativePath: { eq: "gravel-drive.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    show: file(relativePath: { eq: "domestic/Seating-BBQ-area.jpg" }) {
+      childImageSharp {
+        fluid(quality: 50, maxWidth: 800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    sustain: file(relativePath: { eq: "feature-patio.jpg" }) {
+      childImageSharp {
+        fluid(quality: 50, maxWidth: 440) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

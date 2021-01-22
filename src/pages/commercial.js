@@ -11,6 +11,7 @@ import ImageWithText from '../components/layout/image-with-text/image-with-text'
 import ServicesList from '../components/services-list/services-list';
 import Logos from '../components/logos/logos';
 import Heading from '../components/heading/heading';
+import CtaBlock from '../components/cta-block/cta-block';
 
 import logo1 from '../images/Taylor-wimpy.jpg';
 import logo2 from '../images/Barratt-homes.jpg';
@@ -29,39 +30,14 @@ const BlogIndex = ({ data }, location) => {
       image: data.turfing.childImageSharp.fluid
     },
     {
-      title: "PAVING",
-      link: "/services/paving",
-      image: data.paving.childImageSharp.fluid
-    },
-    {
-      title: "DECKING",
-      link: "/services/decking",
-      image: data.timber.childImageSharp.fluid
-    },
-    {
       title: "PLANTING",
       link: "/services/planting",
       image: data.planting.childImageSharp.fluid
     },
     {
-      title: "FENCING",
-      link: "/services/fencing",
-      image: data.fencing.childImageSharp.fluid
-    },
-    {
-      title: "WATER FEATURES",
-      link: "/services/water-features",
-      image: data.waterfeatures.childImageSharp.fluid
-    },
-    {
-      title: "DESIGN SERVICE",
-      link: "/services/design-service",
-      image: data.multilvl.childImageSharp.fluid
-    },
-    {
-      title: "ARTIFICIAL TURF",
-      link: "/services/artificial-turf",
-      image: data.lowmaint.childImageSharp.fluid
+      title: "SHOW HOMES",
+      link: "/services/show-homes",
+      image: data.showHome.childImageSharp.fluid
     }
   ];
 
@@ -93,18 +69,43 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText 
         maxWidth="max-w-6xl"
         image={data.domestic.childImageSharp.fluid}
-        image2={data.commercial2.childImageSharp.fluid}
+        title="In-house managed teams"
         text={
           <p>
-          We have developed strong relationships with our commercial client base, which includes leading construction and house building companies, such as Taylor Wimpey South Midlands and Taylor Wimpey East Anglia, Barratt Homes Cambridge, Barratt Homes Eastern Counties, Crest Nicholson, Morris Homes, Linden Homes, Bovis Homes, Matthew Homes, and have worked on a wide range of commercial landscaping projects.
-          <br/><br/>
-          Our landscaping teams offer comprehensive landscaping services, with each one tailored towards your specific commercial environment. Each project is diligently managed by a trained site supervisor, and our commercial landscape teams work with precise attention to detail to ensure an efficient, professional finish is delivered on time and within budget.
-          <br/><br/>
-          We have worked with commercial clients big and small, offering the same high level of dedication and expertise to every project. Our experienced management team are with you every step of the way to ensure your commercial landscaping project has all the support you need to make it a complete success.
-          <br/><br/>
-          For more information on our commercial landscape construction, installation and maintenance services, <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/contact">contact us today.</Link>
+            Our landscaping teams offer comprehensive landscaping services, with each one tailored towards your specific commercial environment. The commercial landscape division has its own mangers, so each project is diligently managed by its own by a trained site supervisor, and our commercial landscape teams work with precise attention to detail to ensure an efficient, professional finish is delivered on time and within budget.
           </p>
         }
+      />
+      <ImageWithText 
+        imageRight
+        maxWidth="max-w-6xl"
+        image={data.commercial2.childImageSharp.fluid}
+        title="No project is too big or small"
+        text={
+          <p>
+            We have worked with commercial clients big and small, offering the same high level of dedication and expertise to every project. Our experienced management team are with you every step of the way to ensure your commercial landscaping project has all the support you need to make it a complete success.
+          </p>
+        }
+      />
+      <ImageWithText 
+        maxWidth="max-w-6xl"
+        image={data.commercial3.childImageSharp.fluid}
+        title="We're always on time"
+        text={
+          <p>
+            As a company we are acutely aware of house completions and that landscaping is a vital part of this so we ensure they are always completed on times.
+            <br/><br/>
+            For more information on our commercial landscape construction, installation and maintenance services, <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/contact">contact us today.</Link>
+          </p>
+        }
+      />
+      <CtaBlock 
+        text="GET A FREE QUOTE OR CALL US"
+        phone="01353 777 909"
+        link={{
+          text: "FREE QUOTE",
+          to: "/quote"
+        }}
       />
       <div className="text-center">
         <Logos 
@@ -131,7 +132,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -155,21 +156,14 @@ const indexQuery = graphql`
         }
       }
     }
+    commercial3: file(relativePath: { eq: "commercial/Decking-planting-and-turf.jpg" }) {
+      childImageSharp {
+        fluid(quality: 50, maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
     turfing: file(relativePath: { eq: "turf-intro-image.jpg" }) {
-      childImageSharp {
-        fluid(quality: 50, maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    paving: file(relativePath: { eq: "paving-intro-image.jpg" }) {
-      childImageSharp {
-        fluid(quality: 50, maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    timber: file(relativePath: { eq: "decking-intro-image.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
@@ -183,32 +177,11 @@ const indexQuery = graphql`
         }
       }
     }
-    fencing: file(relativePath: { eq: "fencing-image.jpg" }) {
+    showHome: file(relativePath: { eq: "commercial/Decking-planting-and-turf.jpg" }) {
       childImageSharp {
-        fluid(quality: 50, maxWidth: 600) {
+          fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    waterfeatures: file(relativePath: { eq: "water-feature-intro-image.jpg" }) {
-      childImageSharp {
-        fluid(quality: 50, maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    multilvl: file(relativePath: { eq: "garden-design-intro.jpg" }) {
-      childImageSharp {
-        fluid(quality: 50, maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
-    lowmaint: file(relativePath: { eq: "art-turf.jpg" }) {
-      childImageSharp {
-        fluid(quality: 50, maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
+          }
       }
     }
   }

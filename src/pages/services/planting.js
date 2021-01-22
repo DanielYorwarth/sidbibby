@@ -32,12 +32,22 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.turfing.childImageSharp.fluid}
+        title="Working with local suppliers"
         text={
           <p>
-            We use Tamar Nurseries as suppliers for most of our commercial site planting and have built a strong working relationship over a number of years. You have endless amount of options to add different colour, shapes, textures and features in your garden. 
+            We use local suppliers for most of our commercial site planting and have built a strong working relationship over several years. You have endless amount of options to add different colour, shapes, textures and features in your garden. 
             <br/><br/>
             Starting afresh or just adding few new plants in your borders, we can help you create the right ambience for your garden. When the hard landscaping is finished it is time to add soft landscaping with beautiful plants!
-            <br/><br/>
+          </p>
+        }
+      />
+      <ImageWithText
+        imageRight
+        maxWidth="max-w-6xl"
+        image={data.plant.childImageSharp.fluid}
+        title="Perfect for adding more character to your garden"
+        text={
+          <p>
             Every garden needs a good seating area with plants that relax you on those warm days. Scents and sound become your gardens true meaning. It is important when you are designing your garden to find out what you like, your favourite smell and colour especially. At the design stage we can incorporate your planting to show your garden at its best by hiding the shed, compost area or help reduce that unwanted background noise.
             <br/><br/>
             For a free quote, contact us today and fill out a <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/quote">quick and easy quote form!</Link>
@@ -74,7 +84,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -86,21 +96,28 @@ const indexQuery = graphql`
   query {
     headerBG: file(relativePath: { eq: "seating-area-plants.jpg" }) {
       childImageSharp {
-        fluid(quality: 100, maxWidth: 1920) {
+        fluid(quality: 80, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     turfing: file(relativePath: { eq: "planting-serivce-page.jpg" }) {
       childImageSharp {
-        fluid(quality: 50, maxWidth: 800) {
+        fluid(quality: 80, maxWidth: 440) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    plant: file(relativePath: { eq: "seating-area-plants.jpg" }) {
+      childImageSharp {
+        fluid(quality: 80, maxWidth: 440) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }
     }
     testimonialsBg: file(relativePath: { eq: "testimonials-bg.jpg" }) {
       childImageSharp {
-        fluid(quality: 50, maxWidth: 1920) {
+        fluid(quality: 80, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

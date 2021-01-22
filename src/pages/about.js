@@ -39,7 +39,7 @@ const BlogIndex = ({ data }, location) => {
             image={data.about.childImageSharp.fluid}
             text={
               <p>
-                <strong>Sid Bibby Turf & Landscaping Ltd</strong> is a well-established landscaping company based in Sutton Cambridgeshire. We have built up an enviable reputation since 1998. Sid Bibby started this company with his wife, and it has only grown since. We are certainly a family orientated business and pleased to have driven employees some of whom have been with us for over 10 years who we treat like family. We pride ourselves on the best customer service and maintain the highest quality of work. 
+                <strong>Sid Bibby Turf & Landscaping Ltd</strong> is a well-established landscaping company based in Sutton Cambridgeshire. We have built up an enviable reputation since 1998. Sid Bibby started this company with his wife, and it has only grown since. We are certainly a family orientated business and pleased to have driven employees some of whom have been with us for over 10 years who we treat like family. We pride ourselves on the best customer service and maintain the highest quality of work.  
               </p>
             }
             noMargin
@@ -126,7 +126,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />

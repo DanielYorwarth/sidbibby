@@ -16,44 +16,28 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout>
       <SEO
-        title="Artificial Turf"
-        keywords={[`Artificial Turf Cambridgeshire`, `Local Artificial Turf`]}
+        title="Resin"
+        keywords={[`Resin driveways`, `Resin Driveways Cambridge`]}
       />
       <SubHero 
         subTitle="SERVICES"
-        title="ARTIFICIAL TURF"
+        title="RESIN"
         color="#ffffff"
         bgImage={data.headerBG.childImageSharp.fluid}
       />
       <div className="flex flex-wrap max-w-screen-2xl mx-auto px-4 md:px-8 mb-8 md:mb-16">
-        <Breadcrumb location={location} crumbLabel="ARTIFICIAL TURF" />
+        <Breadcrumb location={location} crumbLabel="RESIN" />
       </div>
-      <Intro text="Artificial turf is a great alternative to natural lawn for anyone that it after a garden that can be easily maintained. We have wide variety of options for artificial turf from the softness of the turf, to the grade, all can be chosen by you give you exactly what you desire."/>
+      <Intro text="Resin is a great, SUDS compliant product that is used on driveways and can be incorporated into garden design which lasts up to 25-years."/>
       <ImageWithText
         maxWidth="max-w-6xl"
-        image={data.turfing.childImageSharp.fluid}
-        title="No maintenance & looks just as good as real turf."
+        image={data.showHome.childImageSharp.fluid}
+        title="Lasts up to 25 years"
         text={
           <p>
-            Artificial turf is a great alternative to natural lawn for anyone wanting a garden that requires virtually no maintenance! 
+            At Sid Bibby’s our resin bound surfaces are custom made to your specification.  Resin is good way to add value and the wow factor to your home. Our experienced installation teams will help advise you on finishes to ensure that you get a product exactly that matches your requirements perfectly. We do like to incorporate resin into garden design as well to make the most of the texture of this product.
             <br/><br/>
-            We are able to supply and lay a wide variety – soft feel, thick graded, short pile – we’re confident we can give you exact look and feel you desire! Visit our show gardens to view samples from our suppliers.
-            <br/><br/>
-            Please note, we DO NOT provide a SUPPLY ONLY service. Please view our suppliers websites which may assist in helping find the stockist closest to you if you require this service.
-            <br/><br/>
-          </p>
-        }
-      />
-      <ImageWithText
-      imageRight
-        maxWidth="max-w-6xl"
-        image={data.turfing.childImageSharp.fluid}
-        title="No weeds & great for pets!"
-        text={
-          <p>
-            Gardens with artificial turf require little or no attention whilst remaining tidy and attractive. If a low maintenance garden is what you are looking for, we can also offer many different gravels, slate chips and mulches. All laid on top of weed suppressant membrane which will reduce weed growth to keep your garden looking perfectly preserved all year round!
-            <br/><br/>
-            Artificial can also be great for pet owners, especially dogs! Rest assured; artificial grass is 100% animal friendly. No more grass staining or digging disasters! Not to mention it makes cleaning up any pet ‘messes’ so much easier. 
+            The resin we use is SUDS compliant, meaning they are designed to tackle excess water and are fully water permeable. Its porus nature helps prevent rapid surface water runoff that causes flooding, also avoiding the build-up of puddles and potentially reducing the risk of ice in winter. So, you can enjoy a weed free, long-lasting and economical driveway/garden.
             <br/><br/>
             For a free quote, contact us today and fill out a <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/quote">quick and easy quote form!</Link>
           </p>
@@ -106,12 +90,19 @@ const indexQuery = graphql`
         }
       }
     }
-    turfing: file(relativePath: { eq: "art-turf.jpg" }) {
-      childImageSharp {
-        fluid(quality: 100, maxWidth: 1200) {
-          ...GatsbyImageSharpFluid_withWebp
+    showHome: file(relativePath: { eq: "commercial-service-page.jpg" }) {
+        childImageSharp {
+            fluid(quality: 50, maxWidth: 600) {
+            ...GatsbyImageSharpFluid_withWebp
+            }
         }
-      }
+    }
+    showHome2: file(relativePath: { eq: "commercial/Decking-planting-and-turf.jpg" }) {
+        childImageSharp {
+            fluid(quality: 50, maxWidth: 600) {
+            ...GatsbyImageSharpFluid_withWebp
+            }
+        }
     }
     testimonialsBg: file(relativePath: { eq: "testimonials-bg.jpg" }) {
       childImageSharp {

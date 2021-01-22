@@ -32,12 +32,22 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.turfing.childImageSharp.fluid}
+        title="We'll help you through every step of the process"
         text={
           <p>
             We work with clients to create ponds and water features which can attract all sorts of wildlife! 
             <br/><br/>
             It may be something bespoke, small or a large well-lit water feature. We can advise you on the right design and setting for your feature. Solar water features now cut down on the extra cost of having to have an electricity supply into your garden. Along with solar lights your choice is great.
-            <br/><br/>
+          </p>
+        }
+      />
+      <ImageWithText
+        imageRight
+        maxWidth="max-w-6xl"
+        image={data.water.childImageSharp.fluid}
+        title="Garden Ponds"
+        text={
+          <p>
             Garden ponds look simply stunning. The sparkling, rippling surface of a pond in the summer sunshine is a truly delightful sight, not to mention the beautiful focal point with different textures, it adds to your garden.
             <br/><br/>
              For a free quote, contact us today and fill out a <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/quote">quick and easy quote form!</Link>
@@ -74,7 +84,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -92,6 +102,13 @@ const indexQuery = graphql`
       }
     }
     turfing: file(relativePath: { eq: "water-feature service-page.jpg" }) {
+      childImageSharp {
+        fluid(quality: 50, maxWidth: 800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    water: file(relativePath: { eq: "water-feautres-cambridgeshire.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp

@@ -32,13 +32,25 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.turfing.childImageSharp.fluid}
+        title="Well built, beautifully designed decking"
         text={
           <p>
             Decking can be incorporated into your garden to become a feature for your favourite seating spot or an extended living area right outside your door.
             <br/><br/>
             Wood is an excellent flooring material for the garden. It gives a warm feel which is a modern alternative to hard paved areas. Decking can be installed anywhere in the garden but is best placed in a sunny area. It can be painted in a wide range of colours according to the scheme of your garden. Decking and bark mulch compliment each other well if they are used in close proximity.
-            <br/><br/>
+          </p>
+        }
+      />
+      <ImageWithText
+        imageRight
+        maxWidth="max-w-6xl"
+        image={data.decking.childImageSharp.fluid}
+        title="No maintenace composite decking"
+        text={
+          <p>
             As an alternative, we can supply and lay composite decking, which lasts longer than your typical timber and requires no maintenance – it looks amazing all year round!
+            <br/><br/>
+            We have samples of Piranha composite decking on display stand at our barn and on display in our show gardens, it has up to a 25-year grantee. 
             <br/><br/>
             For a free quote, contact us today and fill out a <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/quote">quick and easy quote form!</Link>
           </p>
@@ -74,7 +86,7 @@ const BlogIndex = ({ data }, location) => {
         text={<span>Rated 4.6/5 <b>"Excellent"</b> <br/>on facebook reviews.</span>}
         link={{
           text: "View All",
-          to: '/',
+          to: 'https://www.facebook.com/sidbibbylandscaping/reviews/',
           color: '#D8574A'
         }}
       />
@@ -92,6 +104,13 @@ const indexQuery = graphql`
       }
     }
     turfing: file(relativePath: { eq: "decking-and-wooden-frame.jpg" }) {
+      childImageSharp {
+        fluid(quality: 50, maxWidth: 800) {
+          ...GatsbyImageSharpFluid_withWebp
+        }
+      }
+    }
+    decking: file(relativePath: { eq: "decking-planting-and-turf.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 800) {
           ...GatsbyImageSharpFluid_withWebp

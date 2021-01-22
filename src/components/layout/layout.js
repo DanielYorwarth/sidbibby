@@ -1,4 +1,5 @@
 import React from "react"
+import {Link} from 'gatsby';
 
 import Header from '../header/header';
 import Footer from '../footer/footer';
@@ -45,8 +46,12 @@ const Layout = props => {
         to: "/fencing"
       },
       {
-        title: "Water Features",
-        to: "/water-features"
+        title: "Show Homes",
+        to: "/show-homes"
+      },
+      {
+        title: "Resin",
+        to: "/resin"
       },
       {
         title: "Design Service",
@@ -55,6 +60,10 @@ const Layout = props => {
       {
         title: "Artificial Turf",
         to: "/artificial-turf"
+      },
+      {
+        title: "Water Features",
+        to: "/water-features"
       },
     ]
   },
@@ -87,6 +96,7 @@ const Layout = props => {
 
   return (
     <div className={`${toggleNav ? `site-head-open` : ``}`}>
+      <Link to="/covid" className="bg-secondary p-4 text-white text-center block w-full underline">Sid Bibby Turf & Landscaping – Control Measures – COVID-19 - Click To View</Link>
       <Header menuLinks={menuLinks} toggleNav={toggleNav} setToggleNav={setToggleNav} />
       <main id="site-main" className="site-main">
         <div id="swup" className="transition-fade">
