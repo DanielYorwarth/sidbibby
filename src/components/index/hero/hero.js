@@ -15,7 +15,7 @@ const Hero = ({title, image, text, button1, button2}) => (
       <div className="hero flex flex-wrap items-center relative">
         <div className="max-w-screen-2xl w-full mx-auto relative z-10 text-white px-4 md:px-8 text-center md:text-left py-10">
           {title && 
-            <h2 className="text-4xl md:text-6xl font-black uppercase leading-none max-w-xl mb-3 md:mb-6">
+            <h2 className="text-4xl md:text-6xl font-black uppercase leading-none mx-auto md:ml-0 max-w-xl mb-3 md:mb-6">
               {title}
             </h2>
           }

@@ -92,7 +92,7 @@ const BlogIndex = ({ data }, location) => {
       },
     },
     {
-      image: data.showHome.childImageSharp.fluid,
+      image: data.resin.childImageSharp.fluid,
       title: 'RESIN',
       text: 'Resin is a great, SUDS compliant product that is used on driveways and can be incorporated into garden design which lasts up to 25-years.',
       link1: {
@@ -247,6 +247,13 @@ const indexQuery = graphql`
     showHome: file(relativePath: { eq: "commercial/Decking-planting-and-turf.jpg" }) {
       childImageSharp {
           fluid(quality: 50, maxWidth: 1000) {
+          ...GatsbyImageSharpFluid_withWebp
+          }
+      }
+    }
+    resin: file(relativePath: { eq: "resin.jpg" }) {
+      childImageSharp {
+          fluid(quality: 100, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
           }
       }

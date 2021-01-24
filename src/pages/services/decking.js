@@ -32,7 +32,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.turfing.childImageSharp.fluid}
-        title="Well built, beautifully designed decking"
+        title="Well built, beautifully designed decking."
         text={
           <p>
             Decking can be incorporated into your garden to become a feature for your favourite seating spot or an extended living area right outside your door.
@@ -45,7 +45,7 @@ const BlogIndex = ({ data }, location) => {
         imageRight
         maxWidth="max-w-6xl"
         image={data.decking.childImageSharp.fluid}
-        title="No maintenace composite decking"
+        title="No maintenace composite decking."
         text={
           <p>
             As an alternative, we can supply and lay composite decking, which lasts longer than your typical timber and requires no maintenance – it looks amazing all year round!

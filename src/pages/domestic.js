@@ -75,7 +75,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText 
         maxWidth="max-w-6xl"
         image={data.intro.childImageSharp.fluid}
-        title="Professional & expert landscapers"
+        title="Professional & expert landscapers."
         text={
           <p>
             We are proud to offer expertise in hard and soft landscape installation to domestic customers.
@@ -90,7 +90,7 @@ const BlogIndex = ({ data }, location) => {
         imageRight
         maxWidth="max-w-6xl"
         image={data.domestic.childImageSharp.fluid}
-        title="Flexible and affordable"
+        title="Flexible and affordable."
         text={
           <p>
             We can do small in-house landscape design service, but we do have strong relationships with leading landscape designers and architects who we work well with.
@@ -178,7 +178,7 @@ const indexQuery = graphql`
         }
       }
     }
-    waterfeatures: file(relativePath: { eq: "water-feature-intro-image.jpg" }) {
+    waterfeatures: file(relativePath: { eq: "resin.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 600) {
           ...GatsbyImageSharpFluid_withWebp

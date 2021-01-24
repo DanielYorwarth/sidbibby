@@ -95,7 +95,7 @@ const Layout = props => {
   }];
 
   return (
-    <div className={`${toggleNav ? `site-head-open` : ``}`}>
+    <div className={`overflow-x-hidden ${toggleNav ? `site-head-open` : ``}`}>
       <Link to="/covid" className="bg-secondary p-4 text-white text-center block w-full underline">Sid Bibby Turf & Landscaping – Control Measures – COVID-19 - Click To View</Link>
       <Header menuLinks={menuLinks} toggleNav={toggleNav} setToggleNav={setToggleNav} />
       <main id="site-main" className="site-main">

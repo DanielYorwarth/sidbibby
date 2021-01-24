@@ -32,7 +32,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.showHome.childImageSharp.fluid}
-        title="Lasts up to 25 years"
+        title="Lasts for up to 25 years."
         text={
           <p>
             At Sid Bibby’s our resin bound surfaces are custom made to your specification.  Resin is good way to add value and the wow factor to your home. Our experienced installation teams will help advise you on finishes to ensure that you get a product exactly that matches your requirements perfectly. We do like to incorporate resin into garden design as well to make the most of the texture of this product.
@@ -90,14 +90,7 @@ const indexQuery = graphql`
         }
       }
     }
-    showHome: file(relativePath: { eq: "commercial-service-page.jpg" }) {
-        childImageSharp {
-            fluid(quality: 50, maxWidth: 600) {
-            ...GatsbyImageSharpFluid_withWebp
-            }
-        }
-    }
-    showHome2: file(relativePath: { eq: "commercial/Decking-planting-and-turf.jpg" }) {
+    showHome: file(relativePath: { eq: "resin.jpg" }) {
         childImageSharp {
             fluid(quality: 50, maxWidth: 600) {
             ...GatsbyImageSharpFluid_withWebp

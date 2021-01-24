@@ -32,7 +32,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.turfing.childImageSharp.fluid}
-        title="Create your own private hub"
+        title="Create your own private hub."
         text={
           <p>
             At Sid Bibby’s we have an extensive range of garden fencing in popular styles to construct a secure perimeter.
@@ -47,7 +47,7 @@ const BlogIndex = ({ data }, location) => {
         imageRight
         maxWidth="max-w-6xl"
         image={data.fencing.childImageSharp.fluid}
-        title="Contemporary Screens & Pergolas "
+        title="Contemporary Screens & Pergolas."
         text={
           <p>
             A new popular form of fencing is the contemporary screen, which really sets the scene for your garden.

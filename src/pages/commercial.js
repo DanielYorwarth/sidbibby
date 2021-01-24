@@ -69,7 +69,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText 
         maxWidth="max-w-6xl"
         image={data.domestic.childImageSharp.fluid}
-        title="In-house managed teams"
+        title="In-house managed teams."
         text={
           <p>
             Our landscaping teams offer comprehensive landscaping services, with each one tailored towards your specific commercial environment. The commercial landscape division has its own mangers, so each project is diligently managed by its own by a trained site supervisor, and our commercial landscape teams work with precise attention to detail to ensure an efficient, professional finish is delivered on time and within budget.
@@ -80,7 +80,7 @@ const BlogIndex = ({ data }, location) => {
         imageRight
         maxWidth="max-w-6xl"
         image={data.commercial2.childImageSharp.fluid}
-        title="No project is too big or small"
+        title="No project is too big or small."
         text={
           <p>
             We have worked with commercial clients big and small, offering the same high level of dedication and expertise to every project. Our experienced management team are with you every step of the way to ensure your commercial landscaping project has all the support you need to make it a complete success.
@@ -90,7 +90,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText 
         maxWidth="max-w-6xl"
         image={data.commercial3.childImageSharp.fluid}
-        title="We're always on time"
+        title="We're always on time."
         text={
           <p>
             As a company we are acutely aware of house completions and that landscaping is a vital part of this so we ensure they are always completed on times.

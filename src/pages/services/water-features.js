@@ -32,7 +32,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.turfing.childImageSharp.fluid}
-        title="We'll help you through every step of the process"
+        title="We'll help you through every step of the process."
         text={
           <p>
             We work with clients to create ponds and water features which can attract all sorts of wildlife! 
@@ -45,7 +45,7 @@ const BlogIndex = ({ data }, location) => {
         imageRight
         maxWidth="max-w-6xl"
         image={data.water.childImageSharp.fluid}
-        title="Garden Ponds"
+        title="Garden Ponds."
         text={
           <p>
             Garden ponds look simply stunning. The sparkling, rippling surface of a pond in the summer sunshine is a truly delightful sight, not to mention the beautiful focal point with different textures, it adds to your garden.

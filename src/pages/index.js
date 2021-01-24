@@ -13,6 +13,7 @@ import List from '../components/list/list';
 import AboutIntro from '../components/index/about-intro/about-intro';
 import Logos from '../components/logos/logos';
 import WorkIntro from '../components/work-intro/work-intro';
+import InstaFeed from '../components/insta-feed/insta-feed';
 
 import sidbibbyLogo from '../images/logo.svg';
 import logo1 from '../images/Taylor-wimpy.jpg';
@@ -56,7 +57,7 @@ const BlogIndex = ({ data }, location) => {
     {
       title: "RESIN",
       link: "/services/resin",
-      image: data.waterfeatures.childImageSharp.fluid
+      image: data.resin.childImageSharp.fluid
     },
     {
       image: data.showHome.childImageSharp.fluid,
@@ -216,6 +217,7 @@ const BlogIndex = ({ data }, location) => {
           to: "/our-work"
         }}
       />
+      <InstaFeed token="IGQVJVbGJZASmZAlNmtCUGx4S2RFVV9DMlhaYmlqMDB5ZAXRoQXhhU2F2N2o2bGFxWW1rWUlXLXNMbVl6YXdVM1U3SjU0d3otTUhkNkVvM2d6eURZAeXBUb1dHakJ2cVhKTTg1R011OVVoTk1zeEU0cXJtSgZDZD" />
 
     </Layout>
   )
@@ -285,13 +287,6 @@ const indexQuery = graphql`
         }
       }
     }
-    waterfeatures: file(relativePath: { eq: "water-feature-intro-image.jpg" }) {
-      childImageSharp {
-        fluid(quality: 50, maxWidth: 600) {
-          ...GatsbyImageSharpFluid_withWebp
-        }
-      }
-    }
     multilvl: file(relativePath: { eq: "garden-design-intro.jpg" }) {
       childImageSharp {
         fluid(quality: 50, maxWidth: 600) {
@@ -302,6 +297,13 @@ const indexQuery = graphql`
     showHome: file(relativePath: { eq: "commercial-service-page.jpg" }) {
       childImageSharp {
           fluid(quality: 50, maxWidth: 600) {
+          ...GatsbyImageSharpFluid_withWebp
+          }
+      }
+    }
+    resin: file(relativePath: { eq: "resin.jpg" }) {
+      childImageSharp {
+          fluid(quality: 100, maxWidth: 1000) {
           ...GatsbyImageSharpFluid_withWebp
           }
       }

@@ -32,7 +32,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.turfing.childImageSharp.fluid}
-        title="Working with local suppliers"
+        title="Working with local suppliers."
         text={
           <p>
             We use local suppliers for most of our commercial site planting and have built a strong working relationship over several years. You have endless amount of options to add different colour, shapes, textures and features in your garden. 
@@ -45,7 +45,7 @@ const BlogIndex = ({ data }, location) => {
         imageRight
         maxWidth="max-w-6xl"
         image={data.plant.childImageSharp.fluid}
-        title="Perfect for adding more character to your garden"
+        title="Perfect for adding more character to your garden."
         text={
           <p>
             Every garden needs a good seating area with plants that relax you on those warm days. Scents and sound become your gardens true meaning. It is important when you are designing your garden to find out what you like, your favourite smell and colour especially. At the design stage we can incorporate your planting to show your garden at its best by hiding the shed, compost area or help reduce that unwanted background noise.

@@ -32,7 +32,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.turfing.childImageSharp.fluid}
-        title="Renowned designers"
+        title="Renowned designers."
         text={
           <p>
             Garden design can help visualise an excellent layout for you garden. We work with great external designers who always deliver brilliantly unique designs.

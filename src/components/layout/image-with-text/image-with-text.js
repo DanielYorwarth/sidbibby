@@ -8,7 +8,7 @@ const ImageWithText = ({title, text, image , image2 , maxWidth, align, noMargin,
       {image2 && <Img className="w-full mt-10" fluid={image2} /> }
     </div>
     <div className={`w-full md:w-3/5 ${imageRight ? 'md:order-first md:pr-8 lg:pr-16 ' : 'md:pl-8 lg:pl-16 '}`}>
-      {title && <h2 className="font-bold text-3xl md:text-4xl mb-6">{title}</h2>}
+      {title && <h2 className="font-black text-primary-dark text-3xl md:text-4xl mb-6">{title}</h2>}
       {text && text}
     </div>
   </div>

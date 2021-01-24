@@ -32,7 +32,7 @@ const BlogIndex = ({ data }, location) => {
       <ImageWithText
         maxWidth="max-w-6xl"
         image={data.showHome.childImageSharp.fluid}
-        title="Over 20 years experience"
+        title="Over 20 years experience."
         text={
           <p>
             Installing Show Home gardens is where we excel. For over 20 years Sid Bibby Turf and Landscape has been installing excellent landscaping to development sales area for many different companies.
@@ -45,7 +45,7 @@ const BlogIndex = ({ data }, location) => {
       imageRight
         maxWidth="max-w-6xl"
         image={data.showHome2.childImageSharp.fluid}
-        title="maintenance & ongoing care"
+        title="Maintenance & ongoing care."
         text={
           <p>
             At Sid Bibby’s we can also set up a maintenance package for the sales area. We will advise and install seasonal bedding and all other elements to the garden looking fresh.
