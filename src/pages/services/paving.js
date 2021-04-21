@@ -21,7 +21,7 @@ const BlogIndex = ({ data }, location) => {
       />
       <SubHero 
         subTitle="SERVICES"
-        title="Patios & Driveways"
+        title="PATIOS & DRIVEWAYS"
         color="#ffffff"
         bgImage={data.headerBG.childImageSharp.fluid}
       />

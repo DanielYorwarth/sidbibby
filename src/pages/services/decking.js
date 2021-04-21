@@ -50,7 +50,7 @@ const BlogIndex = ({ data }, location) => {
           <p>
             As an alternative, we can supply and lay composite decking, which lasts longer than your typical timber and requires no maintenance – it looks amazing all year round!
             <br/><br/>
-            We have samples of Piranha composite decking on display stand at our barn and on display in our show gardens, it has up to a 25-year grantee. 
+            We have samples of Piranha composite decking on display stand at our barn and on display in our show gardens, it has up to a 25-year guarantee. 
             <br/><br/>
             For a free quote, contact us today and fill out a <Link className="text-secondary font-bold hover:opacity-75 duration-300"  to="/quote">quick and easy quote form!</Link>
           </p>

@@ -17,7 +17,7 @@ const SectorCta = ({image, title, subTitle, link}) => {
         >
           <div className="sector-cta__content flex flex-wrap flex-col items-center justify-center relative z-10 pt-32 pb-16 lg:pt-56 lg:pb-48 text-white leading-tight">
             <h2 className="font-black text-4xl lg:text-5xl">{title}</h2>
-            <h4 className="text-xl lg:text-2xl mb-3">{subTitle}</h4>
+            <p className="text-xl lg:text-2xl mb-3">{subTitle}</p>
             <div className="sector-cta__button">
               <AltButton text={link.text} link={link.to} color={link.color} internal/>
             </div>

@@ -17,12 +17,12 @@ const Work = ({tag, title, image}) => {
   }
 
   return (
-    <div className="work__wrapper relative">
+    <div className="work__wrapper relative overflow-hidden">
       <a href={image.src}>
         <div className={`work__tag ${tagColor} absolute z-10 text-white font-bold text-xs p-2`}>
           {tag.toUpperCase()}
         </div>
-        <Img className="work w-full" fluid={image} />
+        <Img className="work w-full duration-300" fluid={image} />
         {title && (
           <div className="work__text absolute bottom-0 z-10 bg-white text-primary-darker font-black py-2 px-4 max-w-md text-center uppercase w-4/5">
             {title}

@@ -15,7 +15,7 @@ import Logos from '../components/logos/logos';
 import WorkIntro from '../components/work-intro/work-intro';
 import InstaFeed from '../components/insta-feed/insta-feed';
 
-import sidbibbyLogo from '../images/logo.svg';
+import sidbibbyLogo from '../images/logo.png';
 import logo1 from '../images/Taylor-wimpy.jpg';
 import logo2 from '../images/Barratt-homes.jpg';
 import logo3 from '../images/crest-nicholson.jpg';
@@ -137,7 +137,7 @@ const BlogIndex = ({ data }, location) => {
             title="DOMESTIC" 
             subTitle="LANDSCAPING & TURF"
             link={{
-              text: "MORE INFO",
+              text: "SEE ALL DOMESTIC SERVICES",
               to: "/domestic",
               color: '#ffffff'
             }}
@@ -149,7 +149,7 @@ const BlogIndex = ({ data }, location) => {
             title="COMMERCIAL" 
             subTitle="LANDSCAPING & TURF"
             link={{
-              text: "MORE INFO",
+              text: "SEE ALL COMMERCIAL SERVICES",
               to: "/commercial",
               color: '#ffffff'
             }}
@@ -233,7 +233,7 @@ const indexQuery = graphql`
     }
     hero: file(relativePath: { eq: "front-page-header.jpg" }) {
       childImageSharp {
-        fluid(quality: 80, maxWidth: 1920) {
+        fluid(quality: 60, maxWidth: 1920) {
           ...GatsbyImageSharpFluid_withWebp
         }
       }

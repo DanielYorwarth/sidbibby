@@ -22,7 +22,6 @@ const BlogIndex = ({ data }, location) => {
       <div className="flex flex-wrap max-w-screen-2xl mx-auto px-4 md:px-8 mb-8 md:mb-16">
         <Breadcrumb location={location} crumbLabel="FREE QUOTE" />
       </div>
-      <p className="text-secondary mx-auto text-center px-4 md:px-8 max-w-5xl mb-8 md:mb-16">PLEASE READ: depending on the amount contracted works we have scheduled; this can affect the lead times on domestic projects. Please take into consideration we could be scheduling works 3 months in advance in some cases for bigger projects. If in doubt, do get in touch to enquire about our lead times.</p>
       <div className="max-w-screen-2xl mx-auto px-4 md:px-8 mb-12 md:mb-24 flex flex-wrap">
         <div className="w-full bg-gray">
           <div className="p-4 md:p-8">

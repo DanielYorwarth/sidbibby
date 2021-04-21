@@ -55,7 +55,7 @@ const Footer = ({menu}) => (
           © {new Date().getFullYear()} SID BIBBY TURF AND LANDSCAPING LTD <span className="px-2 hidden md:inline-block">|</span> <span className="block md:inline-block">DESIGNED BY <span className="pl-2 font-bold text-secondary">VOLLEY.DIGITAL</span></span>
         </div>
         <div>
-          <Link to="/privacy-policy">PRIVACY POLICY</Link><span className="px-2">|</span><Link to="/terms-and-conditions">TERMS & CONDITIONS</Link><span className="px-2">|</span><Link to="/enviro-policy">ENVIRO POLICY</Link>
+          <Link class="py-2 px-2" to="/privacy-policy">PRIVACY POLICY</Link><span>|</span><Link  class="py-2 px-2" to="/terms-and-conditions">TERMS & CONDITIONS</Link><span>|</span><Link class="py-2 px-2" to="/enviro-policy">ENVIRO POLICY</Link>
         </div>
       </div>
     </footer>

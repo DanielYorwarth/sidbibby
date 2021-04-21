@@ -11,10 +11,7 @@ const HamburgerMenu = ({setToggleNav, toggleNav}) => {
     >
       <div
         className="hamburger hamburger--collapse"
-        aria-label="Menu"
-        role="button"
-        aria-controls="navigation"
-      >
+        >
         <div className="hamburger-box">
           <div className="hamburger-inner" />
         </div>
