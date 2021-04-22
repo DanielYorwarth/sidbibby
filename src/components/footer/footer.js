@@ -26,7 +26,7 @@ const Footer = ({menu}) => (
         </div>
         <div className="flex flex-wrap items-start justify-between">
           <div className="mb-10 lg:mb-0">
-            <img className="mb-6 -mt-4 lg:w-auto" src={lightLogo} alt="SidBibby Logo" />
+            <img className="mb-6 lg:w-auto" src={lightLogo} alt="SidBibby Logo" />
             <div className="">
               <a className="hover:opacity-75 duration-300" href="tel:01353777909">Tel: 01353 777909</a> | Fax: 01353 777590 <br/>
               <a className="hover:opacity-75 duration-300 mb-2 block" href="mailto:info@sidbibby.co.uk">Email: info@sidbibby.co.uk</a>

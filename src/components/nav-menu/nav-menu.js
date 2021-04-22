@@ -10,7 +10,7 @@ const NavMenu = ({menu}) => {
         {menu.map((menuItem, i) => (
           <div key={i} className="relative nav-item__wrapper md:py-4">
             <div className="nav-item" role="menuitem">
-              <Link activeClassName="md:font-semibold opacity-100" className={`${menu.length -1 === i ? 'md:pl-3' : 'md:px-3'} ${ i < 3 ? 'text-3xl font-semibold mb-2' : 'text-xl font-light mb-2'} ${ i === 3 && 'mt-4' } md:mt-0 md:mb-0 md:text-base xl:pr-5 xl:pl-5 md:font-normal opacity-75 block`} to={menuItem.link}>
+              <Link activeClassName="md:font-semibold opacity-100" className={`${menu.length -1 === i ? 'md:pl-2' : 'md:px-2'} ${ i < 3 ? 'text-3xl font-semibold mb-2' : 'text-xl font-light mb-2'} ${ i === 3 && 'mt-4' } md:mt-0 md:mb-0 md:text-xs lg:text-sm xl:text-base xl:pr-5 xl:pl-5 md:font-normal opacity-75 block`} to={menuItem.link}>
                 <span className="block">{menuItem.title}</span>
               </Link>
             </div>

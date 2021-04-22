@@ -7,8 +7,8 @@ import ConactInfoBlock from '../contact-info-block/contact-info-block';
 
 const Header = ({setToggleNav, toggleNav, menuLinks}) => (
   <header className="header relative flex flex-wrap">
-    <div className="flex flex-wrap xl:flex-no-wrap flex-1 justify-between items-center px-2 md:px-6 py-3">
-      <Logo classes="header__logo w-56 lg:w-auto -mt-2" />
+    <div className="flex flex-wrap md:flex-no-wrap flex-1 justify-between items-center px-2 md:px-6 py-3">
+      <Logo classes="header__logo w-56 lg:w-auto flex-shrink" />
       <NavMenu menu={menuLinks}/>
       <HamburgerMenu setToggleNav={setToggleNav} toggleNav={toggleNav}/>
     </div>
