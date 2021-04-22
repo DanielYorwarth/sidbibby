@@ -105,7 +105,7 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout>
       <SEO
-        title="Home"
+        title="Landscaping Services in Sutton Cambridgeshire"
         keywords={[`Landscaping Cambridgeshire`, `Turf Cambridgeshire`, `Landscapers Cambridgeshire`, `Paving Cambridgeshire`]}
       />
       <Hero 

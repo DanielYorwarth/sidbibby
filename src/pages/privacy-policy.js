@@ -19,7 +19,7 @@ class Privacy extends React.Component {
 
             <p>At Sid Bibby Turf and Landscaping, accessible from http://www.sidbibby.co.uk/, one of our main priorities is the privacy of our visitors. This Privacy Policy document contains types of information that is collected and recorded by Sid Bibby Turf and Landscaping and how we use it.</p>
             <br/>
-            <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us. Our Privacy Policy was generated with the help of <a href="https://www.gdprprivacynotice.com/">GDPR Privacy Policy Generator from GDPRPrivacyNotice.com</a></p>
+            <p>If you have additional questions or require more information about our Privacy Policy, do not hesitate to contact us.</p>
             <br/>
             <h2>General Data Protection Regulation (GDPR)</h2>
             <p>We are a Data Controller of your information.</p>

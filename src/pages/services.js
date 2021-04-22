@@ -149,7 +149,7 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout>
       <SEO
-        title="Services"
+        title="Landscaping Services based just outside Cambridge"
         keywords={[`Landscaping Services Cambridgeshire`, `Landscaping`, `Landscaping Services Ely`, `Landscaping Haddenham`, `East Anglia Landscaping Services`]}
       />
       <SubHero 

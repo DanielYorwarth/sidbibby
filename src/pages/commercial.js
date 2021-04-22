@@ -54,7 +54,7 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout>
       <SEO
-        title="Commercial"
+        title="Commercial Landscaping Services"
         keywords={[`Commercial Landscaping Cambridgeshire`, `Commercial Landscaping`, `Site Landscaping`, `Landscaping Company Cambridgeshire`, `Landscaping Firm Cambridgeshire`]}
       />
       <SubHero 

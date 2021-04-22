@@ -68,10 +68,10 @@ const FreeQuote = () => {
         <label><input required onChange={handleChange} className="p-4" placeholder="Address" type="text" name="address" /></label>
       </p>
       <p className="w-full md:w-auto mb-4 md:px-2">
-        <label for="byemail"><input onChange={handleChange} style={{opacity: 1, marginRight: '2px', display: 'inline-block'}} className="p-4" value="byemail" type="checkbox" name="byemail" /> Send quote by email</label>
+        <label for="byemail"><input onChange={handleChange} style={{opacity: 1, marginRight: '2px', display: 'inline-block'}} className="p-4" value="yes" type="checkbox" name="byemail" /> Send quote by email</label>
       </p>
       <p className="w-full md:w-auto mb-4 md:px-2">
-        <label for="bypost"><input onChange={handleChange} style={{opacity: 1, marginRight: '2px', display: 'inline-block'}} className="p-4" value="bypost" type="checkbox" name="bypost" /> Send quote by post</label>
+        <label for="bypost"><input onChange={handleChange} style={{opacity: 1, marginRight: '2px', display: 'inline-block'}} className="p-4" value="yes" type="checkbox" name="bypost" /> Send quote by post</label>
       </p>
       <p className="w-full mb-4 md:px-2">
         <label><textarea required onChange={handleChange} placeholder="Additional information" className="p-4" rows="8" name="info"></textarea></label>

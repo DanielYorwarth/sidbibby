@@ -16,7 +16,7 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout>
       <SEO
-        title="Patios & Driveways"
+        title="Paving Services based in Cambridgeshire"
         keywords={[`Paving Cambridgeshire`, `Local Paving Laid`, `Paving Blocks`, `Paving Landscaping Cambridgeshire`, 'Patios & Driveways Cambridgeshire', 'Patio Cambridgeshire']}
       />
       <SubHero 

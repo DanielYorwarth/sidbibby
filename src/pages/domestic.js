@@ -60,7 +60,7 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout>
       <SEO
-        title="Domestic"
+        title="Domestic Garden Landscaping"
         keywords={[`Domestic Landscaping Cambridgeshire`, `Local Landscaper`, `Garden Improvments`, `Garden Landscaping Cambridgeshire`]}
       />
       <SubHero 

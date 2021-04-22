@@ -16,7 +16,7 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout>
       <SEO
-        title="Decking"
+        title="Decking Installation for the Cambridgeshire area"
         keywords={[`Decking Cambridgeshire`, `Local Decking Fitted`, `Fitted Decking`, `Fitted Decking Cambridgeshire`]}
       />
       <SubHero 
