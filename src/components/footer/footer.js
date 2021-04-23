@@ -16,7 +16,7 @@ const Footer = ({menu}) => (
       <div className="bg-primary py-8 md:py-16 xl:py-24 px-4 sm:px-8 md:px-16 xl:px-24 text-white leading-7">
         <div className="flex flex-wrap justify-between mb-10 sm:mb-32 md:mb-40 lg:mb-32">
           <div className="w-full lg:w-1/2 mb-5 lg:mb-0">
-            <h3 className="text-4xl font-extrabold mb-2 leading-10">HOW CAN WE HELP YOU CREATE YOUR DREAM GARDEN?</h3>
+            <h3 className="text-3xl md:text-4xl font-extrabold mb-2 leading-10">HOW CAN WE HELP YOU CREATE YOUR DREAM GARDEN?</h3>
             <p className="text-lg opacity-75 max-w-xl">Laying Turf, Planting, Patios, Fencing Features + much more!</p>
           </div>
           <div className="flex-1 relative lg:text-right">

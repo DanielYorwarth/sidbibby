@@ -12,9 +12,9 @@ const Logos = ({logos, title, text}) => (
    />
   }
   {logos && (
-    <div className="flex flex-wrap items-center justify-between">
+    <div className="flex md:flex-wrap items-center justify-between overflow-x-scroll md:overflow-hidden">
       {logos.map((logo, i) => (
-        <img key={i} className="px-2" src={logo} alt={`logo${i}`} />
+        <img key={i} className="px-4 md:px-2" src={logo} alt={`logo${i}`} />
       ))}
     </div>
   )}
