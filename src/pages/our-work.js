@@ -79,7 +79,7 @@ const BlogIndex = ({ data }, location) => {
       tag: 'domestic'
     },
     {
-      title: 'Bogola',
+      title: 'Pergola',
       image: data.worktwo.childImageSharp.fluid,
       tag: 'commercial'
     },
