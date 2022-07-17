@@ -96,7 +96,6 @@ const Layout = props => {
 
   return (
     <div className={`overflow-x-hidden ${toggleNav ? `site-head-open` : ``}`}>
-      <Link to="/covid" className="bg-secondary p-2 text-white text-center block w-full underline">Sid Bibby Turf & Landscaping – Control Measures – COVID-19 - Click To View</Link>
       <Header menuLinks={menuLinks} toggleNav={toggleNav} setToggleNav={setToggleNav} />
       <main id="site-main" className="site-main">
         <div id="swup" className="transition-fade">
