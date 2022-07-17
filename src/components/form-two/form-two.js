@@ -6,7 +6,7 @@ const FormTwo = () => {
   const handleChange = (e) => {
     setName({ ...name, [e.target.name]: e.target.value })
   }
-
+ 
   useEffect(() => {
     const queryString = window.location.search;
     const urlParams = new URLSearchParams(queryString);
@@ -32,13 +32,13 @@ const FormTwo = () => {
       </p>
       <p className="mb-4 md:px-2 leading-none w-full md:w-1/3 md:pl-2 md:mt-6">
         <label>
-          Attach your CV * <br/>
+          Attach your CV * (Under 8MBs)<br/>
           <input onChange={handleChange} className="pt-4" required value={name['cv']} placeholder="CV" type="file" name="cv" />
         </label>
       </p>
       <p className="md:pl-2 leading-none w-full md:w-1/3 md:mt-6 mb-4">
         <label>
-          Attach your Cover Letter <br/>
+          Attach your Cover Letter (Under 8MBs)<br/>
           <input onChange={handleChange} className="pt-4" value={name['cover']} placeholder="Cover Letter" type="file" name="cover" />
         </label>
       </p>
