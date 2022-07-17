@@ -12,8 +12,7 @@ const BlogIndex = ({ data }, location) => {
   return (
     <Layout>
       <SEO
-        title="Contact"
-        keywords={[`Contact SibBibby`]}
+        title="Job Application"
       />
       <SubHero 
         subTitle="SIDBIBBY"
